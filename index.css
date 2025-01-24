@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#main::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.main-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 200;
+}
+
+.people-logo {
+  position: absolute;
+  right: 300px; /* Move to the right side */
+  top: 200px; /* Move a little down from the top */
+}
+
+.people-logo img {
+  width: 180px; /* Adjust the size of the second logo */
+  height: auto;
+  animation: floating 6s ease-in-out infinite;
+}
+
+.starship-logo {
+  position: absolute;
+  right: 310px; /* Move to the right side */
+  top: 450px; /* Move a little down from the top */
+}
+
+.starship-logo img {
+  width: 180px; /* Adjust the size of the second logo */
+  height: auto;
+  animation: floating 6s ease-in-out infinite;
+}
